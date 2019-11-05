@@ -1,0 +1,104 @@
+1a. Constant time complexity
+
+1b. logarithmic time
+
+
+
+2. function isEven(value) {
+    if (value % 2 == 0) {
+        return true;
+    }
+    else
+        return false;
+    }
+}
+
+constant time complexity- it is only checking one number for one operation
+
+
+3. function areYouHere(arr1, arr2) {
+    for (let i = 0; i < arr1.length; i++) {
+        const el1 = arr1[i];
+        for (let j = 0; j < arr2.length; j++) {
+            const el2 = arr2[j];
+            if (el1 === el2) return true;
+        }
+    }
+    return false;
+}
+
+polynomonial time-it has a nested loop
+
+
+4. function doubleArrayValues(array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i] *= 2;
+    }
+    return array;
+}
+
+linear time- the length of time this function will take is proportional to the array length
+
+5. function naiveSearch(array, item) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === item) {
+            return i;
+        }
+    }
+}
+
+linear time- the length of time this function will take is proportional to the array length
+
+6. function createPairs(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for(let j = i + 1; j < arr.length; j++) {
+            console.log(arr[i] + ", " +  arr[j] );
+        }
+    }
+}
+
+polynomonial time-it has a nested loop
+
+
+7. function compute(num) {
+    let result = [];
+    for (let i = 1; i <= num; i++) {
+
+        if (i === 1) {
+            result.push(0);
+        }
+        else if (i == 2) {
+            result.push(1);
+        }
+        else {
+            result.push(result[i - 2] + result[i - 3]);
+        }
+    }
+    return result;
+}
+
+a. The above function is creating a new array 
+b. linear complexity
+
+8. Constant time complexity- finding an array item without having to loop all the way through
+
+9. constant time complexity- one operation
+
+10. finding out what N is divisible by, linear time
+
+11.function hanoi(disc,src,aux,dest){
+	  if(disc > 0){
+	    hanoi(disc -1,src,dest,aux);
+	    console.log('Move disc '+disc+' from '+src+' to '+dest);
+	    hanoi(disc -1,aux,src,dest);
+	  }
+};
+
+hanoi(3,'src','aux','dest');
+3 discs -7
+4 discs-15
+5 discs-32
+
+
+
+
